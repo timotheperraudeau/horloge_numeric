@@ -1,0 +1,42 @@
+.segment{
+    width: 100px;
+    height: 10px;
+    // background-color: $color-segments;
+    position: absolute;
+    border-radius: 2px;
+    &-1{
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%)
+    }
+    &-2{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &-3{
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &-4{
+        transform: rotate(90deg);
+        left: -45px;
+        top: 48px;
+    }
+    &-5{
+        transform: rotate(90deg);
+        top: 48px;
+        right: -45px;
+    }
+    &-6{
+        transform: rotate(90deg);
+        top: 152px;
+        left: -45px;
+    }
+    &-7{
+        transform: rotate(90deg);
+        top: 152px;
+        right: -45px;
+    }
+}
