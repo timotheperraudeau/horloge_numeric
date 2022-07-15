@@ -3,6 +3,8 @@ let heureUnite = document.querySelector('#heure-un');
 let minuteDizaine = document.querySelector('#minute-diz');
 let minuteUnite = document.querySelector('#minute-un');
 
+function hour(){
+
 function Un (elt){
     elt.querySelector('.segment-1').style.backgroundColor = "white";
 };
@@ -56,7 +58,6 @@ Affichage.prototype.tailleChiffre = function(chiffre, eltDizaine, eltUnite){
         if(chiffre < 20){
             let unite = chiffre-10;
             this.Unite(unite, eltUnite);
-            console.log(unite)
         }else if(chiffre < 30){
             let unite = chiffre-20;
             this.Unite(unite, eltUnite);
@@ -186,12 +187,13 @@ Affichage.prototype.zero = function(elt){
     Sept(elt);
 }
 
-function hour(){
     let date = new Date();
-    let affichage = new Affichage(date.getHours(), date.getMinutes());
+    let affHeure = date.getHours();
+    let affMinute = date.getMinutes();
+    let affichage = new Affichage(affHeure, affMinute);
     affichage.Heure();
     affichage.Minute();
 }
-
-setInterval(hour(), 1000);
+hour();
+setInterval(hour, 100)
 
