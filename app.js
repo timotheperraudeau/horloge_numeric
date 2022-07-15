@@ -4,6 +4,11 @@ let minuteDizaine = document.querySelector('#minute-diz');
 let minuteUnite = document.querySelector('#minute-un');
 
 function hour(){
+    let Segment = document.getElementsByClassName('segment');
+
+    for(value of Segment){
+        value.style.backgroundColor = "rgb(17, 17, 17)"
+    }
 
 function Un (elt){
     elt.querySelector('.segment-1').style.backgroundColor = "white";
@@ -194,6 +199,6 @@ Affichage.prototype.zero = function(elt){
     affichage.Heure();
     affichage.Minute();
 }
-hour();
-setInterval(hour, 100)
+// hour();
+setInterval(hour, 1000);
 
